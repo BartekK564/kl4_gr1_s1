@@ -58,3 +58,25 @@ CREATE TABLE wizyty(
 INSERT INTO wizyty
 VALUES
 ('Jan','Kowalski','21134212','2000-12-9','leczenie'); 
+
+INSERT INTO wizyty
+VALUES
+('Jan','Kowalski','21134212','2000-12-10','profilaktyka');
+
+INSERT INTO wizyty
+VALUES
+(Null,'Paweł','Kowalczyk','987654321','2000-12-20','kontrola')
+
+ALTER TABLE wizyty
+ADD id int primary key AUTO_INCREMENT first;
+
+DELETE FROM wizyty 
+WHERE id = 3;
+
+INSERT INTO wizyty
+VALUES
+(Null,'Jan','Kowalski','21134212','2000-12-10','profliaktyka');
+
+SELECT *
+FROM wizyty
+WHERE typ='profilaktyka';
