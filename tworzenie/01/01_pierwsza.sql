@@ -67,4 +67,33 @@ SELECT miejscowosc
 FROM Pracownicy
 ORDER BY miejscowosc;
 
-SELECT DISTI
+SELECT DISTINCT imie, nazwisko
+FROM Pracownicy
+ORDER BY nazwisko;
+
+ALTER TABLE Pracownicy 
+ADD PRIMARY KEY(id_pracownika,jezyk);
+
+INSERT INTO Pracownicy
+(id_pracownika,jezyk)
+VALUES
+(3,'CSS');
+
+INSERT INTO Pracownicy
+VALUES
+(2, 'Antoni', 'Malinowski', 'JavaScript', 'Naklo nad Noteca', '1', 'Staszica');
+
+SELECT imie, nazwisko 
+FROM Pracownicy
+WHERE jezyk='CSS';
+
+SELECT imie, nazwisko, miejscowosc
+FROM Pracownicy
+WHERE imie='Antoni' And nazwisko='Malinowski';
+
+DELETE FROM Pracownicy
+WHERE jezyk='PHP';
+
+SELECT DISTINCT imie, nazwisko, miejscowosc
+FROM Pracownicy
+WHERE imie='jan' and nazwisko='kowalski';
